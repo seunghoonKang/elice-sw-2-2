@@ -20,6 +20,19 @@
 
     </script>
     <h1>문자열</h1>
-    <script></script>
+    <script>
+      document.write('Hello world <br>');
+      console.log("Hello \
+      world <br>");  //줄바꿈하면 에러 나는데 역슬래시 하면 에러 안남
+      console.log(`Hello world <br>`); //줄바꿈해도 에러 안남, 실제로 줄바꿈이 되는걸 볼 수 있음
+      document.write('dsasaddasdsadasads'+'<br>');
+      document.write('dsasaddasdsadasads'.length);
+      document.write('<br>');
+      document.write('hell world'.replace('hell', 'hello'));
+      document.write('<br>');
+      document.write(1+1); //이항연산자 중 산술연산자로 인식
+      document.write('<br>');
+      document.write('1'+'1'); //이항연산자 중 결합연산자로 인식
+    </script>
   </body>
 </html>
