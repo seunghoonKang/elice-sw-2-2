@@ -1,49 +1,70 @@
 <!doctype html>
 <html>
-  <head>
-    <title>WEB - Welcome</title>
-    <meta charset="utf-8">
-    <style>
-      h1 {
-        border-bottom: 5px solid black;
-        padding: 30px;
-        margin-bottom: 0;
-      }
-      h1 a {
-        text-decoration: none;
+
+<head>
+  <title>WEB - Welcome</title>
+  <meta charset="utf-8">
+  <style>
+    h1 {
+      border-bottom: 5px solid black;
+      padding: 30px;
+      margin-bottom: 0;
+    }
+
+    h1 a {
+      text-decoration: none;
+    }
+
+    ol {
+
+      margin-top: 0;
+    }
+
+    @media all and (min-width: 480px) {
+      #container {
+        display: grid;
+        grid-template-columns: 150px 1fr;
       }
 
       ol {
-        
-        margin-top: 0;
+        border-right: 5px solid black;
       }
-      @media all and (min-width: 480px) { 
-          #container {
-            display: grid;
-            grid-template-columns: 150px 1fr;
-         }
-         ol {
-            border-right: 5px solid black;
-         }
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBB7EY37XD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-DBB7EY37XD');
+  </script>
+</head>
+
+<body>
+  <h1><a href="index.html">이고잉님과의 실시간 강의 꿀잼</a></h1>
+
+  <input type="button" value="night" onclick="
+      if(this.value === 'night') //night에 큰따옴표 안됨 위에서 큰따옴표 썻잖아
+      {
+        // 만약에 이 버튼의 value값이 night라면 아래 코드가 실행되고,
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'day';
+        // 이 버튼의 value값을 day로 변경.
       }
+      else {
+        //아니라면 아래 코드가 실행
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'night';
+        //이 버튼의 value값을 night로 변경한다.
+      }
+    ">
 
-    </style>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DBB7EY37XD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DBB7EY37XD');
-</script>
-  </head>
-  
-  <body>
-    <h1><a href="index.html">이고잉님과의 실시간 강의 꿀잼</a></h1>
-    
-    <input type="button" value="night" 
+  <!-- <input type="button" value="night" 
       onclick="
         document.querySelector('body').style.backgroundColor = 'black';
         document.querySelector('body').style.color = 'white';
@@ -55,21 +76,22 @@
         document.querySelector('body').style.backgroundColor = 'white';
         document.querySelector('body').style.color = 'black';
       "
-    >
+    > -->
 
 
-    <div id="container">
+  <div id="container">
 
-      <ol>
-        <li><a href="1.html">html</a></li>
-        <li><a href="2.html">css</a></li>
-        <li><a href="3.html">javascript</a></li>
-      </ol>
-      <div>
-        <h2>Welcome</h2>
-        Hello, WEB!!!대애박
-      </div>
+    <ol>
+      <li><a href="1.html">html</a></li>
+      <li><a href="2.html">css</a></li>
+      <li><a href="3.html">javascript</a></li>
+    </ol>
+    <div>
+      <h2>Welcome</h2>
+      Hello, WEB!!!대애박
     </div>
-  
+  </div>
+
 </body>
+
 </html>
