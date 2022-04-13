@@ -1,0 +1,37 @@
+<html>
+<script>
+
+</script>
+
+<body>
+  Javascript is Lorem <span 
+    style="
+      background-color: rgb(223, 217, 217);
+      padding: 0 5px;
+      cursor: pointer;
+      " 
+    onclick="
+      document.querySelector('#hidden').style.display='inline';
+      this.style.display = 'none';
+    ">...</span>
+  <span id="hidden" style="display: none;">ipsum dolor sit amet consectetur adipisicing elit. Neque perspiciatis
+    temporibus hic ex nisi ipsam sequi voluptate a, rerum voluptas, nihil enim totam amet animi illum eveniet nulla
+    blanditiis aspernatur.</span>
+
+<hr>
+
+
+JavaScript is <span 
+            style="
+                background-color:rgb(215, 215, 215);
+                padding:0 5px;
+                cursor:pointer;
+            " 
+            onclick="
+                this.style.display='none';
+                document.querySelector('#content').innerHTML = `ipsum dolor sit amet consectetur adipisicing elit. Neque perspiciatis temporibus hic ex nisi ipsam sequi voluptate a, rerum voluptas, nihil enim totam amet animi illum eveniet nulla blanditiis aspernatur.`;
+            ">...</span> 
+            <span id="content"></span>
+</body>
+
+</html>
