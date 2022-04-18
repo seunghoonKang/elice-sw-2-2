@@ -4,7 +4,7 @@ function night() {
   document.querySelector('body').style.color = 'white';
   let as = document.querySelectorAll('a');
   for (let i = 0; i < as.length; i = i + 1) {
-      as[i].style.color = 'white';
+    as[i].style.color = 'white';
   }
   // $('body').css('background-color', 'black');
   // $('body').css('color', 'white');
@@ -18,6 +18,16 @@ function day() {
   // 이 버튼의 value값을 night로 변경한다. 
   let as = document.querySelectorAll('a');
   for (let i = 0; i < as.length; i = i + 1) {
-      as[i].style.color = 'black';
+    as[i].style.color = 'black';
+  }
+}
+
+//외부에서 사용할 함수만 export를 붙인다.
+
+export function dayNight(mode) {
+  if (mode === 'night') {
+    night();
+  } else {
+    day();
   }
 }
