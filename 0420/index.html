@@ -35,6 +35,7 @@
       {id:1, title: 'html', body: 'html is ...'},
       {id:2, title: 'css', body: 'css is ...'}
     ];
+    let nextId = 3;
     let selectedId = null;
     function navHandler(e){
       // 1. 링크가 작동하지 않아야 한다.
@@ -67,9 +68,21 @@
       document.querySelector('article').innerHTML = content;
       control();
     }
+
+    function createHandler(e){
+      e.preventDefault();
+      const t =e.target.title.value;
+      const b =e.target.body.value;
+      const newTopic = {id:nextId, title:t, body:b};
+      topics.push(newTopic);
+      nav();
+      selectedId = nextId;
+      nextId = nextId + 1;
+      read();
+    }
     function create(){
       const content = `
-        <form onsubmit="">
+        <form onsubmit="createHandler(event);">
           <p><input type="text" name="title" placeholder="제목"></p>
           <p><textarea name="body" placeholder="본문"></textarea></p>
           <p><input type="submit" value="create"></p>
