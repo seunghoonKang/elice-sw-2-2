@@ -67,7 +67,16 @@
       document.querySelector('article').innerHTML = content;
       control();
     }
-    function create(){}
+    function create(){
+      const content = `
+        <form onsubmit="">
+          <p><input type="text" name="title" placeholder="제목"></p>
+          <p><textarea name="body" placeholder="본문"></textarea></p>
+          <p><input type="submit" value="create"></p>
+        </form>
+      `;
+      document.querySelector('article').innerHTML = content;
+    }
     function update(){}
     function del(){}
     function control(){
@@ -81,7 +90,7 @@
       }
 
       document.querySelector('#control').innerHTML = `
-        <li><a href="/create">Create</a></li>
+        <li><a href="/create" onclick="event.preventDefault(); create();">Create</a></li>
         ${contextUI}
       `;
     }
